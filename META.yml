@@ -24,6 +24,6 @@ no_index:
 requires:
   perl: 5.006
 resources:
-  bugtracker: http://github.com/xenoterracide/dist/issues
-  repository: git://github.com/xenoterracide/dist.git
+  bugtracker: http://github.com/xenoterracide/Test-HasValidVersion/issues
+  repository: git://github.com/xenoterracide/Test-HasValidVersion.git
 version: 0.1.0
