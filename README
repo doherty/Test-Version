@@ -1,5 +1,5 @@
 NAME
-    Test::HasValidVersion - Test::HasValidVersion
+    Test::HasValidVersion - Check Perl modules for valid version numbers
 
 VERSION
     version 0.1.0

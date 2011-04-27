@@ -1,5 +1,5 @@
 ---
-abstract: Test::HasValidVersion
+abstract: 'Check Perl modules for valid version numbers'
 author:
   - 'Caleb Cushing <xenoterracide@gmail.com>'
 build_requires:

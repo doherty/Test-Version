@@ -8,14 +8,14 @@ BEGIN {
 
 1;
 
-# ABSTRACT: Test::HasValidVersion
+# ABSTRACT: Check Perl modules for valid version numbers
 
 __END__
 =pod
 
 =head1 NAME
 
-Test::HasValidVersion - Test::HasValidVersion
+Test::HasValidVersion - Check Perl modules for valid version numbers
 
 =head1 VERSION
 
