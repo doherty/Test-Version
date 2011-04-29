@@ -50,7 +50,6 @@ sub all_pm_version_is_valid {
 	}
 	my @files = File::Find::Rule->perl_module->in( $dir );
 
-	$test->subtest( "All versions are valid", sub {
 		foreach my $file ( @files ) {
 			my $version = _get_version( $file );
 
@@ -70,7 +69,6 @@ sub all_pm_version_is_valid {
 				);
 			}
 		}
-	});
 }
 1;
 
