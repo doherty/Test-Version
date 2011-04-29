@@ -13,7 +13,7 @@ use boolean;
 use File::Find::Rule::Perl;
 use Test::More;
 
-our @EXPORT = qw ( all_pm_version_is_valid );
+our @EXPORT_OK = qw ( version_is_valid all_pm_version_is_valid );
 
 my $test = Test::Builder->new;
 
@@ -30,9 +30,11 @@ sub version_is_valid {
 
 	if ( is_lax( $version ) ) {
 		$test->ok( true, $name );
+		return true;
 	}
 	else {
 		$test->ok( false, "$file version not valid");
+		return false;
 	}
 }
 
@@ -53,7 +55,23 @@ sub all_pm_version_is_valid {
 			my $version = _get_version( $file );
 			next unless $version;
 
-			version_is_valid( $version, "$file version $version is valid");
+			my $valid
+				= version_is_valid(
+					$version,
+					"$file version $version is valid"
+				);
+
+			if ( $valid ) {
+				$test->ok( true, $name );
+				return true;
+			}
+			else {
+				$test->ok(
+					false,
+					"all modules in $dir do not have valid versions",
+				);
+				return false;
+			}
 		}
 	});
 }

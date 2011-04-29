@@ -5,8 +5,6 @@ use warnings;
 use Test::More;
 use Test::HasValidVersion qw( all_pm_version_is_valid );
 
-ok ( not all_pm_version_is_valid ( 'corpus/fail' )
-	, 'all_pm_version_is_valid fails'
-);
+all_pm_version_is_valid ( 'corpus/fail' )
 
 done_testing;
