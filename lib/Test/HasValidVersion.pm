@@ -53,7 +53,6 @@ sub all_pm_version_is_valid {
 	$test->subtest( "All versions are valid", sub {
 		foreach my $file ( @files ) {
 			my $version = _get_version( $file );
-			next unless $version;
 
 			my $valid
 				= version_is_valid(
@@ -63,14 +62,12 @@ sub all_pm_version_is_valid {
 
 			if ( $valid ) {
 				$test->ok( true, $name );
-				return true;
 			}
 			else {
 				$test->ok(
 					false,
 					"all modules in $dir do not have valid versions",
 				);
-				return false;
 			}
 		}
 	});
