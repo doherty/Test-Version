@@ -26,7 +26,16 @@ my %WriteMakefileArgs = (
   'EXE_FILES' => [],
   'LICENSE' => 'artistic_2',
   'NAME' => 'Test::HasValidVersion',
-  'PREREQ_PM' => {},
+  'PREREQ_PM' => {
+    'Exporter' => '0',
+    'File::Find::Rule::Perl' => '0',
+    'Module::Extract::VERSION' => '0',
+    'Test::Builder' => '0',
+    'Test::More' => '0',
+    'boolean' => '0',
+    'parent' => '0',
+    'version' => '0'
+  },
   'VERSION' => '0.1.0',
   'test' => {
     'TESTS' => 't/*.t'
