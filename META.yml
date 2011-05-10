@@ -3,10 +3,13 @@ abstract: 'Check Perl modules for valid version numbers'
 author:
   - 'Caleb Cushing <xenoterracide@gmail.com>'
 build_requires:
+  Carp: 0
   English: 0
   File::Find: 0
   File::Temp: 0
+  Scalar::Util: 0
   Test::Builder::Tester: 0
+  Test::More: 0.94
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0

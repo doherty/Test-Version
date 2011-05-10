@@ -12,6 +12,7 @@ docs/SubmittingPatches.pod
 lib/Test/HasValidVersion.pm
 perlcritic.rc
 t/00-compile.t
+t/000-report-versions.t
 t/01-pass.t
 t/02-fail.t
 t/author-critic.t

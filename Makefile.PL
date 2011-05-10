@@ -12,10 +12,13 @@ my %WriteMakefileArgs = (
   'ABSTRACT' => 'Check Perl modules for valid version numbers',
   'AUTHOR' => 'Caleb Cushing <xenoterracide@gmail.com>',
   'BUILD_REQUIRES' => {
+    'Carp' => '0',
     'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
-    'Test::Builder::Tester' => '0'
+    'Scalar::Util' => '0',
+    'Test::Builder::Tester' => '0',
+    'Test::More' => '0.94'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.30'
